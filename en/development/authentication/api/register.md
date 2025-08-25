@@ -33,7 +33,7 @@ sequenceDiagram
 ```json
 {
     "productCode": "[1 to 100 chars]",
-    "applicationCode": "[1 to 100 chara]"
+    "applicationCode": "[1 to 100 chars]"
     "emailAddress": "[email address]",
     "password": "[1 to 100 chars]",
     "firstName": "[1 to 100 chars]",
