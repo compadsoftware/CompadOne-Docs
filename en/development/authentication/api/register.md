@@ -32,6 +32,8 @@ sequenceDiagram
 
 ```json
 {
+    "productCode": "[1 to 100 chars]",
+    "applicationCode": "[1 to 100 chara]@
     "emailAddress": "[email address]",
     "password": "[1 to 100 chars]",
     "firstName": "[1 to 100 chars]",
@@ -45,6 +47,8 @@ sequenceDiagram
 
 ```json
 {
+    "productCode": "CompadOne",
+    "applicationCode": "pos",
     "emailAddress": "esmeijer@compad.nl",
     "password": "12345",
     "firstName": "Carol",
