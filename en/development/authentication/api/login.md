@@ -16,7 +16,8 @@ User login
 **Data constraints**
 
 ```json
-{
+{  "productCode": "[1 to 100 chars]",
+    "applicationCode": "[1 to 100 chars]"
     "emailAddress": "[email address]",
     "password": "[1 to 100 chars]",
     "tenantId": "[1 to 100 chars, optional]",
@@ -27,7 +28,9 @@ User login
 **Data examples**
 
 ```json
-{
+{   
+    "productCode": "CompadOne",
+    "applicationCode": "pos",
     "emailAddress": "esmeijer@compad.nl",
     "password": "12345",
     "tenantId": "0000-0000-0000-0000"
