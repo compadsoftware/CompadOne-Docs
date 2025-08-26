@@ -19,7 +19,7 @@ User login
 {
     "productlineCode": "[1 to 100 chars]",
     "applicationCode": "[1 to 100 chars]"
-    "emailAddress": "[valid email address (1 to 300 chars)]",
+    "username": "[valid email address (1 to 300 chars)]",
     "password": "[1 to 100 chars]",
     "tenantId": "[1 to 100 chars, optional]",
 }
@@ -32,7 +32,7 @@ User login
 {   
     "productlineCode": "CompadOne",
     "applicationCode": "pos",
-    "emailAddress": "esmeijer@compad.nl",
+    "username": "esmeijer@compad.nl",
     "password": "12345",
     "tenantId": "0000-0000-0000-0000"
 }
@@ -97,7 +97,7 @@ User with `id` of '00000-00000-00000-00000' sets their last login date/time` hea
 ```json
 {
     "non_field_errors": [
-        "Emailaddress not found."
+        "username not found."
     ]
 }
 ```
