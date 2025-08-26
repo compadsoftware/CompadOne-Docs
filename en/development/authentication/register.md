@@ -1,4 +1,4 @@
-# register
+# Register User Account
 
 CompadOne consists of various applications that together offer a total solution. These include a web-based management portal for managing master data such as customers, 
 articles, and the like. But also applications such as mobile cash register, desktop point of sale, or a reporting app. To give users access to this total solution, central user management is desirable.
@@ -42,7 +42,7 @@ Only external users or internal user with the role ‘tenant administrator’ ca
 
 ## Screen design
 
-
+[<img src="/en/images/log-in.jpg" width="250"/>](login.png)
 
 ## Registration process
 
@@ -76,4 +76,11 @@ flowchart TD
 
 ```
 
-## Related information
+## 🔗 Related information
+- [login](login.md)
+- [logout](logout.md)
+- [forgot password](password-recovery-request.md)
+- [email validate](user-confirmed.md)
+- [inovate](user-inovate.md)
+
+
