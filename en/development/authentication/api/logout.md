@@ -19,7 +19,7 @@ User logout for specific application
 {
     "productlineCode": "[1 to 100 chars]",
     "applicationCode": "[1 to 100 chars]"
-    "emailAddress": "[valid email address (1 to 300 chars)]",
+    "username": "[valid email address (1 to 300 chars)]",
 }
 ```
 
@@ -30,7 +30,7 @@ User logout for specific application
 {   
     "productlineCode": "CompadOne",
     "applicationCode": "pos",
-    "emailAddress": "esmeijer@compad.nl",
+    "username": "esmeijer@compad.nl",
 }
 ```
 
@@ -45,7 +45,7 @@ User logout for specific application
 
 ## Error Response
 
-**Condition** : If 'productlineCode', 'applicationCode' or 'emailAddress' are empty or 'productlineCode', 'applicationCode' doesn't exists.
+**Condition** : If 'productlineCode', 'applicationCode' or 'username' are empty or 'productlineCode', 'applicationCode' doesn't exists.
 
 **Code** : `401 BAD REQUEST`
 
@@ -61,7 +61,7 @@ User logout for specific application
 
 ## Error Response
 
-**Condition** : If 'emailAddress' doesn't exists
+**Condition** : If 'username' doesn't exists
 
 **Code** : `401 NOT FOUND
 
@@ -70,7 +70,7 @@ User logout for specific application
 ```json
 {
     "non_field_errors": [
-        "Emailaddress not found."
+        "username not found."
     ]
 }
 ```
