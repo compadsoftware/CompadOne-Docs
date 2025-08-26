@@ -36,7 +36,7 @@ sequenceDiagram
 {
     "productlineCode": "[valid productline code - (1 to 100 chars)]",
     "applicationCode": "[valid productline code - (1 to 100 chars)]"
-    "emailAddress": "[valid emailaddress - (1 to 300 chars)]",
+    "username": "[valid emailaddress - (1 to 300 chars)]",
     "password": "[password (1 to 100 chars)]",
     "firstName": "[1 to 100 chars]",
     "lastName": "[1 to 100 chars]"
@@ -53,7 +53,7 @@ sequenceDiagram
 {
     "productlineCode": "CompadOne",
     "applicationCode": "pos",
-    "emailAddress": "esmeijer@compad.nl",
+    "username": "esmeijer@compad.nl",
     "password": "12345",
     "firstName": "Carol",
     "lastName": "Esmeijer",
@@ -104,7 +104,7 @@ User with `id` of '00000-00000-00000-00000' sets their name, passing `token` hea
 {
     "user" : {
         "id": "0000-0000-0000-0000",
-        "email": "esemeijer@compad.nl",
+        "emailAddress": "esemeijer@compad.nl",
         "firstName": "Carol",
         "lastName": "Esmeijer"        
     },
