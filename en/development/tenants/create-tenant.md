@@ -58,11 +58,12 @@ flowchart TD
 > All administrative and financial processing for new tenants, including invoicing of subscriptions for these tenants and payments, is handled by CompadOne. We will use CompadOne for the invoicing itself.
 
 ## 🔗 Related information API
-- [create tenant](api/tenant-create.md)
-- [update tenant](api/tenant-update.md)
-- [delete tenant](api/tenant-delete.md)
-- [switch tenant](api/tenant-switch.md)
-- [get tenant](api/tenant-get.md)
+- [create tenant](api/post.md)
+- [update tenant](api/put.md)
+- [delete tenant](api/delete.md)
+- [switch tenant](api/switch.md)
+- [get tenant](api/get.md)
+- [get tenant](api/get-list.md)
 
 
 ## 🔗 Related information
