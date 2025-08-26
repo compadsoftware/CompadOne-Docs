@@ -5,7 +5,7 @@ User login
 
 ## Endpoints
 
-**URL** : `/api/authentication/`
+**URL** : `/api/v1/authentication/`
 
 **Method** : `POST`
 
