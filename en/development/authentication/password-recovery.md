@@ -66,7 +66,7 @@ flowchart TD
 
 ```
 
-**Change password**
+**Fase 3 - Change password**
 
 ```mermaid
 flowchart TD
