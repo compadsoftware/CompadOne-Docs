@@ -42,7 +42,7 @@ Only external users or internal user with the role ‘tenant administrator’ ca
 
 ## Screen design
 
-[<img src="/en/images/log-in.jpg" width="250"/>](login.png)
+[<img src="/en/images/log-in.jpg" width="250"/>](/en/images/log-in.jp)
 
 ## Registration process
 
