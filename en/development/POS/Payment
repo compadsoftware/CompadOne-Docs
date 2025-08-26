@@ -1,0 +1,15 @@
+# Payment ERD Diagram
+
+
+```mermaid
+erDiagram
+    Payment {
+        guid id PK 
+        string name
+        decimal minimumamount
+        decimal fee
+        boolean disabled
+    }
+
+
+```
