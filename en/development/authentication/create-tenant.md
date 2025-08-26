@@ -1,3 +1,7 @@
+![][~concept]
+
+[~concept]: https://img.shields.io/badge/-concept-ff0000.svg
+
 # Create tenant
 
 After the user had register an `UserAccount` he/she can create one or more tenants. Only user with the role `tenant administrator` can create new tenants and **external** users who are 
