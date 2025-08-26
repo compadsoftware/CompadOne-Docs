@@ -5,7 +5,7 @@ User logout for specific application
 
 ## Endpoints
 
-**URL** : `/api/authentication/`
+**URL** : `/api/*version*/authentication/`
 
 **Method** : `POST`
 
