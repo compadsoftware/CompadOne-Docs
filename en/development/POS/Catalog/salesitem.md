@@ -16,7 +16,7 @@ erDiagram
         boolean disabled
     }
     SalesItem ||--o{ SalesTurnovergroup : has
-    SalesItem {
+    SalesTurnovergroup {
         guid id PK 
         string name
     }
