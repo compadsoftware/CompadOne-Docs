@@ -2,7 +2,7 @@
 
 Send a password recovery request token to the user
 
-**URL** : `/api/*version*/authentication/recovery/request/
+**URL** : `/api/*version*/authentication/recovery/request/`
 
 **Method** : `POST`
 
