@@ -1,24 +1,6 @@
 # Register user
 When an User wants access to a CompadOne application or to the CompadOne portal, he/she must have an account. An user get an account to CompadOne by create an Account or when he/she got invated by an registered user. An UserAccount have access to a Tenant
 
-## Sequence diagram
-
-```mermaid
-sequenceDiagram
-    User->>CompadOne: Register emailaddress and password?
-    CompadOne-->>User: send confirmation email
-    User->>CompadOne: Confirm emailaddress
-    CompadOne -->> Affiliate: Send notification email
-    CompadOne -->> Publisher: Send notification email
-```
-
-> [!IMPORTANT]  
-> The registration process should be as simple as possible. Therefore, it is not necessary to confirm the email address ? immediately, but within 24 hours. Every time the user attempts to log in with an email address that has not yet been confirmed, a confirmation email will be sent.
-
-## Screen design
-
-
-
 
 ## API Endpoints
 
@@ -61,35 +43,6 @@ sequenceDiagram
     "phoneNumber": "00000-00000-00000-00000",
 }
 ```
-**Process**
-
-```mermaid
-flowchart TD
-    start([start register])
-    lookupemail[[lookup email]]
-    start --> lookupemail
-    checkemailexist{email exists}
-    lookupemail --> checkemailexist
-    checkapplication{"`user already
-        registered for
-        application`"}
-    checkemailexist --> |exist|checkapplication
-    checkemailexist --> |not exist|register
-    checkapplication --> |not exist|checkrole
-    checkapplication --> |exist|registerfailed
-    checkrole --> |tenant admin|register
-    checkrole --> |other role|checkexternal
-    checkrole{check role}
-    checkexternal --> |external|register
-    checkexternal --> |not external|registerfailed
-    checkexternal{check user external}
-    register[[register]]
-    register --> endregistration 
-    registerfailed[register failed]
-    registerfailed --> endregistration
-    endregistration([end registration])
-
-```
 
 ### Success Responses
 
@@ -116,3 +69,5 @@ User with `id` of '00000-00000-00000-00000' sets their name, passing `token` hea
 * After the account has been created, the account must be activated within 24 hour
 * To activate an account, the user receives a validation email. By clicking on the activation link in the validation email, the account is activated
 * Created accounts are external accounts and can fully manage new tenants and already created tenants independently
+
+  
