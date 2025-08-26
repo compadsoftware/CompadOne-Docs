@@ -16,7 +16,8 @@ User login
 **Data constraints**
 
 ```json
-{  "productlineCode": "[1 to 100 chars]",
+{
+    "productlineCode": "[1 to 100 chars]",
     "applicationCode": "[1 to 100 chars]"
     "emailAddress": "[valid email address (1 to 300 chars)]",
     "password": "[1 to 100 chars]",
