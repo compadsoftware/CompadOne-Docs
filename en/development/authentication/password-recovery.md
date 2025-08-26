@@ -1,4 +1,4 @@
-# Register User Account
+# Password recovery
 
 Users have one single user account forall the CompadOne applications. When the user forgot his password, he/she can start a password recovery procedure, by press on the 'forgotten password'.
 
