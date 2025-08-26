@@ -67,3 +67,52 @@ User with `id` of '00000-00000-00000-00000' sets their last login date/time` hea
 * If the account is not activated/confirmed in 24 hours, the login will failed
 * To activate an account, the user receives a validation email. By clicking on the activation link in the validation email, the account is activated
 * Created accounts are external accounts and can fully manage new tenants and already created tenants independently
+
+
+## Error Response
+
+**Condition** : If 'emailAddress', 'password', 'productlineCode', 'applicationCode' are empty or 'productlineCode', 'applicationCode', 'tenantId' doesn't exists.
+
+**Code** : `401 BAD REQUEST`
+
+**Content** :
+
+```json
+{
+    "non_field_errors": [
+        "Unable to login with provided credentials."
+    ]
+}
+```
+
+## Error Response
+
+**Condition** : If 'emailAddress' doesn't exists
+
+**Code** : `401 NOT FOUND
+
+**Content** :
+
+```json
+{
+    "non_field_errors": [
+        "Emailaddress not found."
+    ]
+}
+```
+
+## Error Response
+
+**Condition** : If 'user' is disabled or blocked
+
+**Code** : `401 UNAUTHORIZED
+
+**Content** :
+
+```json
+{
+    "non_field_errors": [
+        "Unable to login with provided credentials."
+    ]
+}
+```
