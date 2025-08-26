@@ -37,7 +37,10 @@ flowchart TD
     checkemailexist --> |not exists|passwordRecoveryFailed
     sendPasswordRecoveryEmail[[send password recovery email]]
     passwordRecoveryFailed[[password recovery failed]]
+    sendPasswordRecoveryEmail --> endrecovery
+    passwordRecoveryFailed --> endrecovery
     endrecovery([end password recovery])
+
 ```
 
 **Fase 2 - Password recovery check**
@@ -57,6 +60,8 @@ flowchart TD
     checkPasswordRecoveryTokenCheck --> |no|passwordRecoveryFailed
     passwordRecovery[[password recovery is ok]]
     passwordRecoveryFailed[[password recovery failed]]
+    passwordRecovery --> endrecovery
+    passwordRecoveryFailed --> endrecovery
     endrecovery([end password recovery])
 
 ```
