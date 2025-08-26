@@ -3,7 +3,7 @@
 
 ```mermaid
 erDiagram
-    User {
+    AppUser {
         guid id PK 
         string firstname
         string lastname
@@ -11,8 +11,8 @@ erDiagram
         guid userAccount
         string pincode
     }
-    User ||--o{ userAccount : has
-    User ||--o{ UserRole : has
+    AppUser ||--o{ userAccount : has
+    AppUser ||--o{ UserRole : has
     UserRole {
         guid id PK 
         user user FK
