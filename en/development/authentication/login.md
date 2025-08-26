@@ -24,7 +24,7 @@ flowchart TD
     checkemailexist{email exists}
     lookupemail --> checkemailexist
     checkemailexist --> |exist|checkpassword
-    checkemailexist --> |not exist|checkpassword
+    checkemailexist --> |not exist|loginfailed
     checkpassword{"`check password`"}
     checkpassword --> |correct|checkactivated
     checkpassword --> |invalid|failedattempt
