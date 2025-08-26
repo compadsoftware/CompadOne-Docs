@@ -57,6 +57,71 @@ flowchart TD
 > [!NOTE]  
 > All administrative and financial processing for new tenants, including invoicing of subscriptions for these tenants and payments, is handled by CompadOne. We will use CompadOne for the invoicing itself.
 
+## ERD Diagram
+
+
+
+
+```mermaid
+erDiagram
+    User {
+        guid id PK 
+        string firstname
+        string lastname        
+        string emailaddress FK "Unique email address"
+        string password
+    }
+    User ||--o{ UserTenantRole : has
+    UserTenantRole {
+        guid id PK 
+        user user FK
+        tenant tenant FK
+        productline productline
+        app application
+    }
+    UserTenantRole }|--o| ProductLine : has
+    ProductLine {
+        guid id PK 
+        string code
+        string name
+    }
+    ProductLine }|--o| App : has
+    App {
+        guid id PK 
+        string code
+        string name
+    }
+    UserTenantRole }|--o| App : has
+    UserTenantRole }|--o| Tenant : has
+    Tenant {
+        guid id PK 
+        string companyname
+        string tradename
+        string emailaddress
+        string address
+        string postalcode
+        string city
+        string region
+        country country
+        string bankaccount
+        string phonenumber
+        string website
+        string taxnumber
+    }
+    UserTenantRole }o--|{ Role :has
+    Role {
+        guid id PK
+        string name FK
+    }
+    Role }o--o{ Permission : has
+    Permission {
+        Guid id PK
+        string name FK
+    }
+
+```
+
+
 ## 🔗 Related information API
 - [create tenant](api/post.md)
 - [update tenant](api/put.md)
