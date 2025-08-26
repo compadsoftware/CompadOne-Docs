@@ -55,11 +55,15 @@ flowchart TD
     checkappright --> |no|loginfailed
     checktenant{tenant is requested}
     checktenant --> |tenant is given|checktenantaccess
-    checktenant --> loginwithouttenant
+    checktenant --> lookuptenant
     checktenantaccess{user access to tenant}
     checktenantaccess --> |yes|login
     checktenantaccess --> |no|loginfailed
-    loginwithouttenant[login without tenant]
+    lookuptenant[check tenant]
+    lookuptenant --> checktenantactive
+    checktenantactive{tenant is active}
+    checktenantactive --> |yes|checktenantactive
+    checktenantactive --> |no|loginfailed
     login[login with tenant]
     loginfailed --> endlogin
     endlogin([end login])
