@@ -77,9 +77,9 @@ flowchart TD
     lookupemail --> checkemailexist
     checkemailexist --> |exist|checkPasswordRecoveryTokenSet
     checkemailexist --> |not exists|changepasswordfailed
-    checkPasswordRecoveryToken{"`password
-      recovery
-      request token or old password`"}
+    checkPasswordRecoveryTokenSet{"`password recovery
+      request token or
+      old password?`"}
     checkPasswordRecoveryTokenSet-->|password recovery request token|checkPasswordRecoveryToken
     checkPasswordRecoveryTokenSet-->|old password|checkOldPassword
     checkPasswordRecoveryToken{"`password
