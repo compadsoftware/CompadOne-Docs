@@ -64,6 +64,9 @@ Provide name of Tenant to be created.
 }
 ```
 
+> [!NOTE]  
+> All administrative and financial processing for new tenants, including invoicing of subscriptions for these tenants and payments, is handled by CompadOne. We will use CompadOne for the invoicing itself.
+
 ## Success Response
 
 **Condition** : If everything is OK and an Account didn't exist for this User.
