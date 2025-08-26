@@ -1,6 +1,6 @@
 # Password recovery 
 
-Reset the password
+Check if the password recovery procedure was started. It's only an check
 
 **URL** : `/api/authentication/recovery/`
 
@@ -14,7 +14,6 @@ Reset the password
 {
     "username": "[valid email address]",
     "requesttoken": "[valid password recovery request token]",
-    "password": "[valid password]"
 }
 ```
 
@@ -24,7 +23,6 @@ Reset the password
 {
     "username": "esmeijer@compad.nl",
     "requesttoken": "93144b288eb1fdccbe46d6fc0f241a51766ecd3d",
-    "password": "12345"
 }
 ```
 
@@ -34,11 +32,7 @@ Reset the password
 
 **Content example**
 
-```json
-{
-    "token": "93144b288eb1fdccbe46d6fc0f241a51766ecd3d"
-}
-```
+
 
 
 
@@ -54,7 +48,23 @@ Reset the password
 
 **Condition** : If 'username' and 'password' combination is wrong.
 
-**Code** : `400 BAD REQUEST`
+**Code** : `401 NOT FOUND
+
+**Content** :
+
+```json
+{
+    "username": [
+        "no username found."
+    ]
+}
+```
+
+## Error Response
+
+**Condition** : If 'username' and 'requesttoken' combination is wrong.
+
+**Code** : `400 BAD REQUEST
 
 **Content** :
 
