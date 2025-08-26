@@ -16,9 +16,9 @@ User login
 **Data constraints**
 
 ```json
-{  "productCode": "[1 to 100 chars]",
+{  "productlineCode": "[1 to 100 chars]",
     "applicationCode": "[1 to 100 chars]"
-    "emailAddress": "[email address]",
+    "emailAddress": "[valid email address (1 to 300 chars)]",
     "password": "[1 to 100 chars]",
     "tenantId": "[1 to 100 chars, optional]",
 }
@@ -29,7 +29,7 @@ User login
 
 ```json
 {   
-    "productCode": "CompadOne",
+    "productlineCode": "CompadOne",
     "applicationCode": "pos",
     "emailAddress": "esmeijer@compad.nl",
     "password": "12345",
