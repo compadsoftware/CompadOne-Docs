@@ -100,14 +100,16 @@ flowchart TD
 ```
 
 ## 🔗 Related information API
-- [password-recovery request](/api/password-recovery-request.md)
+- [password-recovery request](api/password-recovery-request.md)
 - [password-recovery](api/password-recovery.md)
-- [change password](/api/password.md)
+- [change password](api/password.md)
 
 
   ## 🔗 Related information
+- [general](index.md)
 - [login](login.md)
 - [logout](logout.md)
 - [register](register.md)
 - [invite](user-invite.md)
+
 
