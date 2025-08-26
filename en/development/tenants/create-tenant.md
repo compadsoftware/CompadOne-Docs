@@ -54,7 +54,8 @@ flowchart TD
     endcreating([end creating])
 
 ```
-
+> [!NOTE]  
+> All administrative and financial processing for new tenants, including invoicing of subscriptions for these tenants and payments, is handled by CompadOne. We will use CompadOne for the invoicing itself.
 
 ## 🔗 Related information API
 - [create tenant](api/tenant-create.md)
