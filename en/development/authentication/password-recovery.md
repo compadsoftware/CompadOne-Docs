@@ -105,7 +105,7 @@ flowchart TD
 - [change password](api/password.md)
 
 
-  ## 🔗 Related information
+## 🔗 Related information
 - [general](index.md)
 - [login](login.md)
 - [logout](logout.md)
