@@ -71,11 +71,17 @@ flowchart TD
 ```
 
 
-## 🔗 Related information
+## 🔗 Related information API
+- [logout](api/logout.md)
+- [login](api/login.md)
+
+
+
+  ## 🔗 Related information
+- [general](index.md)
 - [login](login.md)
 - [logout](logout.md)
-- [forgot password](password-recovery-request.md)
-- [email validate](user-confirmed.md)
-- [inovate](user-inovate.md)
+- [register](register.md)
+- [invite](user-invite.md)
 
 
