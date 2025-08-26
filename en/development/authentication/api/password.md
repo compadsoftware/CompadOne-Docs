@@ -2,7 +2,7 @@
 
 Check if the password recovery procedure was started. It's only an check
 
-**URL** : `/api/authentication/password/`
+**URL** : `/api/v1/authentication/password/`
 
 **Method** : `POST`
 
