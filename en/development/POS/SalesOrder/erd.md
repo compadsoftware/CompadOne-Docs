@@ -25,7 +25,7 @@ erDiagram
         guid modifiedby
         datetime deletedon
         guid deletedby
-        string hash
+        string hash "security hash code"
     }
     SalesOrder |o--o| Customer : has
     SalesOrder |o--o| Table : has
@@ -45,6 +45,7 @@ erDiagram
         guid modifiedby
         datetime deletedon
         guid deletedby
+        string hash "security hash code"
     }
     SalesOrder }|--o| SalesOrderPayment : has
     SalesOrderPayment {
@@ -57,5 +58,6 @@ erDiagram
         guid modifiedby
         datetime deletedon
         guid deletedby
+        string hash "security hash code"
     }
 ```
