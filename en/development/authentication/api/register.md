@@ -4,7 +4,7 @@ When an User wants access to a CompadOne application or to the CompadOne portal,
 
 ## API Endpoints
 
-**URL** : `/api/_version_/authentication/register`
+**URL** : `/api/v1/authentication/register`
 
 **Method** : `POST`
 
