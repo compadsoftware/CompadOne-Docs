@@ -8,6 +8,8 @@ sequenceDiagram
     User->>CompadOne: Register emailaddress and password?
     CompadOne-->>User: send confirmation email
     User->>CompadOne: Confirm emailaddress
+    CompadOne -->> Affiliate: Send notification email
+    CompadOne -->> Publisher: Send notification email
 ```
 
 > [!IMPORTANT]  
@@ -20,7 +22,7 @@ sequenceDiagram
 
 ## API Endpoints
 
-**URL** : `/api/authentication/register`
+**URL** : `/api/_version_/authentication/register`
 
 **Method** : `POST`
 
@@ -32,33 +34,62 @@ sequenceDiagram
 
 ```json
 {
-    "productCode": "[1 to 100 chars]",
-    "applicationCode": "[1 to 100 chars]"
-    "emailAddress": "[email address]",
-    "password": "[1 to 100 chars]",
+    "productlineCode": "[valid productline code - (1 to 100 chars)]",
+    "applicationCode": "[valid productline code - (1 to 100 chars)]"
+    "emailAddress": "[valid emailaddress - (1 to 300 chars)]",
+    "password": "[password (1 to 100 chars)]",
     "firstName": "[1 to 100 chars]",
     "lastName": "[1 to 100 chars]"
-    "phoneNumber": "[1 to 100 chars]"
+    "phoneNumber": "[valid international phonenumber (1 to 100 chars])",
+    "affiliate": "[1 to 100 chars]"
 }
 ```
+
 
 
 **Data examples**
 
 ```json
 {
-    "productCode": "CompadOne",
+    "productlineCode": "CompadOne",
     "applicationCode": "pos",
     "emailAddress": "esmeijer@compad.nl",
     "password": "12345",
     "firstName": "Carol",
     "lastName": "Esmeijer",
-    "phoneNumber": "+31(0)743200200"
+    "phoneNumber": "+31(0)743200200",
+    "phoneNumber": "00000-00000-00000-00000",
 }
 ```
+**Process**
 
+```mermaid
+flowchart TD
+    start([start register])
+    lookupemail[[lookup email]]
+    start --> lookupemail
+    checkemailexist{email exists}
+    lookupemail --> checkemailexist
+    checkapplication{"`user already
+        registered for
+        application`"}
+    checkemailexist --> |exist|checkapplication
+    checkemailexist --> |not exist|register
+    checkapplication --> |not exist|checkrole
+    checkapplication --> |exist|registerfailed
+    checkrole --> |tenant admin|register
+    checkrole --> |other role|checkexternal
+    checkrole{check role}
+    checkexternal --> |external|register
+    checkexternal --> |not external|registerfailed
+    checkexternal{check user external}
+    register[[register]]
+    register --> endregistration 
+    registerfailed[register failed]
+    registerfailed --> endregistration
+    endregistration([end registration])
 
-my.compadone.com/api/v1/authentication/register
+```
 
 ### Success Responses
 
